@@ -1,0 +1,42 @@
+.contenedorCard {
+  border: 1px solid black;
+  margin: 20px auto;
+  padding: 10px;
+  width: 50rem;
+  border-radius: 30px;
+  display: flex;
+  background: white;
+}
+
+.cardHijo {
+  background: white;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardHijo h2,
+.cardHijo p {
+  background: white;
+  font-size: 1, 5rem;
+}
+
+.cardHijo h2 {
+  color: black;
+}
+
+.cardHijo p {
+  color: #fa4a0c;
+  font-weight: bold;
+}
+
+.linkCard {
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .contenedorCard {
+    width: 22rem;
+  }
+}

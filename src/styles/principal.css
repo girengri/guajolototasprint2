@@ -1,0 +1,21 @@
+.parrafo {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 50px;
+}
+
+.categoriasContenedor {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  font-size: 50px;
+}
+
+.categoriasContenedor a {
+  text-decoration: none;
+  color: orange;
+}
+
+.categoriasContenedor a:focus {
+  background-color: rgba(222, 245, 170, 0.801);
+}
