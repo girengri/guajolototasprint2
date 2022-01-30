@@ -1,10 +1,10 @@
 import React from "react";
-import { ComidaLista } from "./ComidaLista";
+import { BebidaLista } from "./BebidaLista";
 
-export const BebidaCategoria = ({comida}) => {
+export const BebidaCategoria = ({ comida }) => {
   return (
     <div>
-      <ComidaLista category="bebida" comida={comida} />
+      <BebidaLista category="bebida" comida={comida} />
     </div>
   );
 };

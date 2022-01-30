@@ -19,3 +19,8 @@
 .categoriasContenedor a:focus {
   background-color: rgba(222, 245, 170, 0.801);
 }
+
+.buscadorcentrar {
+  display: flex;
+  justify-content: center;
+}
