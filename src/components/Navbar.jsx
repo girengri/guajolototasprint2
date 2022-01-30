@@ -12,6 +12,13 @@ export const Navbar = () => {
           width="100"
         />
       </Link>
+      <Link to="/login">
+        <img
+          src="https://res.cloudinary.com/girengri/image/upload/v1643346916/guajolotas/shopping-cart_nfyidz.png"
+          alt="carrito"
+          width="30"
+        />
+      </Link>
 
       <Link to="/carrito">
         <img

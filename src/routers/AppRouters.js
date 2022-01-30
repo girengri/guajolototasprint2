@@ -10,6 +10,7 @@ import { Principal } from "../containers/Principal";
 import { url } from "../helpers/url";
 import { Carrito } from "../containers/Carrito";
 import { Login } from "../containers/Login";
+import { Registro } from "../containers/Registro";
 
 export const AppRouters = () => {
     const [comidas, setComidas] = useState([]);
@@ -37,7 +38,8 @@ export const AppRouters = () => {
                 <Route path="/buscador" element={<BuscadorComida />} />
                 <Route path="/principal" element={<Principal />} />
                 <Route path="/carrito" element={<Carrito />} />
-                <Route path="/sesion" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/registro" element={<Registro />} />
                 <Route path="*" element={<Navigate to="/principal" />} />
             </Routes>
         </BrowserRouter>
