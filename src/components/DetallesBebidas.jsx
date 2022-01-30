@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { obtenerComidaPorId } from "../selectors/obtenerComidaPorId";
 import "../styles/Detalles.css";
 
-export const DetallesComida = ({ platos }) => {
+export const DetallesBebidas = ({ platos }) => {
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -18,12 +18,11 @@ export const DetallesComida = ({ platos }) => {
     sabordos,
     sabortres,
     saborcuatro,
-    saborcinco,
-    saborseis,
-    bebidauno,
-    bebidados,
-    bebidatres,
-    bebidacuatro,
+    guajouno,
+    guajodos,
+    guajotres,
+    guajocuatro,
+    guajocinco,
   } = plato;
 
   const handleReturn = () => {
@@ -44,50 +43,55 @@ export const DetallesComida = ({ platos }) => {
         <p className="preciop">$ {precio} MXN</p>
       </div>
 
-      <h3>Sabor</h3>
       <div className="sabores">
+        <h3>Sabor</h3>
         <img src={saboruno} alt="sabor" />
         <img src={sabordos} alt="sabor" />
         <img src={sabortres} alt="sabor" />
         <img src={saborcuatro} alt="sabor" />
-        <img src={saborcinco} alt="" />
-        <img src={saborseis} alt="" />
       </div>
 
       <div>
         <h3>Guajolocombo</h3>
         <p>
-          Selecciona la bebida que más te guste y <br />
+          Selecciona la torta que más te guste y <br />
           disfruta de tu desayuno
         </p>
 
         <form>
           <div>
-            <img src={bebidauno.imagenb} alt="combo" />
+            <img src={guajouno.imagenb} alt="combo" />
             <input type="checkbox" />
-            <label htmlFor="">{bebidauno.nombre}</label>
-            <p>$ {bebidauno.precio} MXN</p>
+            <label htmlFor="">{guajouno.nombre}</label>
+            <p>$ {guajouno.precio} MXN</p>
           </div>
 
           <div>
-            <img src={bebidados.imagenb} alt="combo" />
+            <img src={guajodos.imagenb} alt="combo" />
             <input type="checkbox" />
-            <label htmlFor="">{bebidados.nombre}</label>
-            <p>$ {bebidados.precio} MXN</p>
+            <label htmlFor="">{guajodos.nombre}</label>
+            <p>$ {guajodos.precio} MXN</p>
           </div>
 
           <div>
-            <img src={bebidatres.imagenb} alt="combo" />
+            <img src={guajotres.imagenb} alt="combo" />
             <input type="checkbox" />
-            <label htmlFor="">{bebidatres.nombre}</label>
-            <p>$ {bebidatres.precio} MXN</p>
+            <label htmlFor="">{guajotres.nombre}</label>
+            <p>$ {guajotres.precio} MXN</p>
           </div>
 
           <div>
-            <img src={bebidacuatro.imagenb} alt="combo" />
+            <img src={guajocuatro.imagenb} alt="combo" />
             <input type="checkbox" />
-            <label htmlFor="">{bebidacuatro.nombre}</label>
-            <p>$ {bebidacuatro.precio} MXN</p>
+            <label htmlFor="">{guajocuatro.nombre}</label>
+            <p>$ {guajocuatro.precio} MXN</p>
+          </div>
+
+          <div>
+            <img src={guajocinco.imagenb} alt="combo" />
+            <input type="checkbox" />
+            <label htmlFor="">{guajocinco.nombre}</label>
+            <p>$ {guajocinco.precio} MXN</p>
           </div>
         </form>
       </div>

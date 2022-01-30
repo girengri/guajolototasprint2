@@ -1,0 +1,38 @@
+.contenedorimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.imagenp {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.nombreprincipal {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.preciop {
+  color: #fa4a0c;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sabores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 80px;
+  padding: 40px;
+  justify-content: center;
+  padding-right: 120px;
+}
+
+.boton{
+  border: none;
+  margin:12px;
+  cursor: pointer;
+}
