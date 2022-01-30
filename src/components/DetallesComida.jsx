@@ -31,7 +31,7 @@ export const DetallesComida = ({ platos }) => {
   };
   return (
     <div>
-      <button onClick={() => handleReturn()}>
+      <button className="boton" onClick={() => handleReturn()}>
         <img
           src="https://res.cloudinary.com/girengri/image/upload/v1643570204/guajolotas/flecha_tvu61y.png"
           alt="volver"

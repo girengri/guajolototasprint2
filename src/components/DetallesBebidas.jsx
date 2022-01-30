@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { obtenerComidaPorId } from "../selectors/obtenerComidaPorId";
-import "../styles/Detalles.css"
+import "../styles/Detalles.css";
 
 export const DetallesBebidas = ({ platos }) => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export const DetallesBebidas = ({ platos }) => {
   };
   return (
     <div>
-      <button onClick={() => handleReturn()}>
+      <button className="boton" onClick={() => handleReturn()}>
         <img
           src="https://res.cloudinary.com/girengri/image/upload/v1643570204/guajolotas/flecha_tvu61y.png"
           alt="volver"
@@ -93,7 +93,6 @@ export const DetallesBebidas = ({ platos }) => {
             <label htmlFor="">{guajocinco.nombre}</label>
             <p>$ {guajocinco.precio} MXN</p>
           </div>
-          
         </form>
       </div>
     </div>

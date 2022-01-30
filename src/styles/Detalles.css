@@ -30,3 +30,9 @@
   justify-content: center;
   padding-right: 120px;
 }
+
+.boton{
+  border: none;
+  margin:12px;
+  cursor: pointer;
+}
