@@ -12,7 +12,17 @@ export const Navbar = () => {
           width="100"
         />
       </Link>
-      <Link to="/login">
+
+      <div className="btnNavbar">
+      <Link className="btnLogin" to="/login">
+        <img
+          src="https://res.cloudinary.com/julcabh/image/upload/v1643585731/login-xxl_rnvlgd.png"
+          alt="carrito"
+          width="30"
+        />
+      </Link>
+
+      <Link  to="/carrito">
         <img
           src="https://res.cloudinary.com/girengri/image/upload/v1643346916/guajolotas/shopping-cart_nfyidz.png"
           alt="carrito"
@@ -20,13 +30,8 @@ export const Navbar = () => {
         />
       </Link>
 
-      <Link to="/carrito">
-        <img
-          src="https://res.cloudinary.com/girengri/image/upload/v1643346916/guajolotas/shopping-cart_nfyidz.png"
-          alt="carrito"
-          width="30"
-        />
-      </Link>
+      </div>
+      
     </nav>
   );
 };

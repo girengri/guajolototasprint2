@@ -4,3 +4,12 @@
   align-items: center;
   margin: 20px;
 }
+.btnNavbar{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 20px;
+}
+.btnLogin{
+  margin-right: 20px;
+}
