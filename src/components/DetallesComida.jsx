@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { guardarDatos } from "../localStorage/localStorage";
 import { obtenerComidaPorId } from "../selectors/obtenerComidaPorId";
 import "../styles/Detalles.css";
 
 export const DetallesComida = ({ platos }) => {
+  let carrito = [];
+
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -28,6 +31,21 @@ export const DetallesComida = ({ platos }) => {
 
   const handleReturn = () => {
     navigate(-1);
+  };
+
+  const objeto = {
+    nombrep,
+    imgprincipal,
+    precio,
+  };
+
+  const mandarDatos = () => {
+    carrito.push(objeto);
+    guardarDatos(carrito);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
   return (
     <div>
@@ -54,43 +72,56 @@ export const DetallesComida = ({ platos }) => {
         <img src={saborseis} alt="" />
       </div>
 
-      <div>
-        <h3>Guajolocombo</h3>
-        <p>
-          Selecciona la bebida que más te guste y <br />
-          disfruta de tu desayuno
-        </p>
+      <br />
+      <h3>Guajolocombo</h3>
+      <br />
+      <p>
+        Selecciona la bebida que más te guste y <br />
+        disfruta de tu desayuno
+      </p>
+      <br />
 
-        <form>
-          <div>
-            <img src={bebidauno.imagenb} alt="combo" />
-            <input type="checkbox" />
-            <label htmlFor="">{bebidauno.nombre}</label>
-            <p>$ {bebidauno.precio} MXN</p>
-          </div>
+      <form className="contenedorcombo" onSubmit={handleSubmit}>
+        <div>
+          <img src={bebidauno.imagenb} alt="combo" />
+          <input type="checkbox" />
+          <br />
+          <label htmlFor="">{bebidauno.nombre}</label>
+          <p>$ {bebidauno.precio} MXN</p>
+        </div>
 
-          <div>
-            <img src={bebidados.imagenb} alt="combo" />
-            <input type="checkbox" />
-            <label htmlFor="">{bebidados.nombre}</label>
-            <p>$ {bebidados.precio} MXN</p>
-          </div>
+        <div>
+          <img src={bebidados.imagenb} alt="combo" />
+          <input type="checkbox" />
+          <br />
+          <label htmlFor="">{bebidados.nombre}</label>
+          <p>$ {bebidados.precio} MXN</p>
+        </div>
 
-          <div>
-            <img src={bebidatres.imagenb} alt="combo" />
-            <input type="checkbox" />
-            <label htmlFor="">{bebidatres.nombre}</label>
-            <p>$ {bebidatres.precio} MXN</p>
-          </div>
+        <div>
+          <img src={bebidatres.imagenb} alt="combo" />
+          <input type="checkbox" />
+          <br />
+          <label htmlFor="">{bebidatres.nombre}</label>
+          <p>$ {bebidatres.precio} MXN</p>
+        </div>
 
-          <div>
-            <img src={bebidacuatro.imagenb} alt="combo" />
-            <input type="checkbox" />
-            <label htmlFor="">{bebidacuatro.nombre}</label>
-            <p>$ {bebidacuatro.precio} MXN</p>
-          </div>
-        </form>
-      </div>
+        <div>
+          <img src={bebidacuatro.imagenb} alt="combo" />
+          <input type="checkbox" />
+          <br />
+          <label htmlFor="">{bebidacuatro.nombre}</label>
+          <p>$ {bebidacuatro.precio} MXN</p>
+        </div>
+
+        <button
+          className="btnenviar"
+          type="submit"
+          onClick={() => mandarDatos()}
+        >
+          Agregar al carrito
+        </button>
+      </form>
     </div>
   );
 };

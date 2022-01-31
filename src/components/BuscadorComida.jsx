@@ -7,7 +7,6 @@ import ComidaCard from "./ComidaCard";
 import "../styles/buscadorComida.css";
 
 export const BuscadorComida = ({ plato }) => {
-
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -37,15 +36,14 @@ export const BuscadorComida = ({ plato }) => {
           name="searchText"
           value={searchText}
           onChange={handleInputChange}
+          size="100"
         />
       </form>
 
       <div>
-        {
-          platosFiltrados.map((plato)=>(
-            <ComidaCard key={plato.id} {...plato} />
-          ))
-        }
+        {platosFiltrados.map((plato) => (
+          <ComidaCard key={plato.id} {...plato} />
+        ))}
       </div>
     </div>
   );

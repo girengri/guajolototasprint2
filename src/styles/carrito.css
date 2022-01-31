@@ -1,0 +1,15 @@
+.btnpagar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnenviaruno {
+  border: none;
+  background-color: #fa4a0c;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  padding: 30px;
+}

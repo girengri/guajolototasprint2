@@ -24,15 +24,31 @@
 
 .sabores {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  gap: 80px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 10px;
+  padding: 10px;
   justify-content: center;
-  padding-right: 120px;
 }
 
-.boton{
+.boton {
   border: none;
-  margin:12px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.contenedorcombo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.btnenviar{
+  border: none;
+  background-color: #fa4a0c;
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
   cursor: pointer;
 }
