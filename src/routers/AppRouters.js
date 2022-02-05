@@ -13,7 +13,6 @@ import { Login } from "../containers/Login";
 import { Registro } from "../containers/Registro";
 import { DetallesBebidas } from "../components/DetallesBebidas";
 
-
 export const AppRouters = () => {
     const [comidas, setComidas] = useState([]);
 
@@ -21,11 +20,13 @@ export const AppRouters = () => {
         obtenerDatos();
     }, []);
 
+    console.log(comidas);
     const obtenerDatos = async () => {
         const respuesta = await fetch(url);
         const data = await respuesta.json();
         setComidas(data);
     };
+    console.log(comidas);
     return (
         <BrowserRouter>
             <Navbar />

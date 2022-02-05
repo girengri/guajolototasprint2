@@ -4,7 +4,7 @@ export const guardarDatos = (state) => {
 
 export const obtenerDatos = () => {
     const platosStorage = localStorage.getItem("platos");
-    if (platosStorage === null) {
+    if (platosStorage === null || platosStorage === []) {
         return [
             {
                 nombrep: "Carrito Vacio",

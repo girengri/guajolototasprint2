@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { guardarDatos } from "../localStorage/localStorage";
 import { obtenerComidaPorId } from "../selectors/obtenerComidaPorId";
 import "../styles/Detalles.css";
 
 export const DetallesBebidas = ({ platos }) => {
-  let carrito = [];
+  const [carrito, setCarrito] = useState([]);
+
+  let platoLocales = JSON.parse(localStorage.getItem("platos"));
+  useEffect(() => {
+    if (platoLocales !== undefined) {
+      setCarrito(...carrito, platoLocales);
+    }
+    if (platoLocales === null || platoLocales === undefined) {
+      localStorage.setItem("platos", JSON.stringify([objeto]));
+    }
+  }, []);
 
   const navigate = useNavigate();
 
@@ -39,7 +49,7 @@ export const DetallesBebidas = ({ platos }) => {
   };
 
   const mandarDatos = () => {
-    carrito.push(objeto);
+    setCarrito([...carrito, objeto]);
     guardarDatos(carrito);
   };
 
