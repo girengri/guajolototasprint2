@@ -18,5 +18,13 @@ export const obtenerDatos = () => {
 };
 
 export const eliminarDatos = (id) => {
-    localStorage.removeItem(id);
+    const local = JSON.parse(localStorage.getItem("platos"));
+    const buscado = local.find((data) => data.ide === Number(id));
+    local.forEach((loc, index) => {
+        if (loc.ide === buscado.ide) {
+            local.splice(index, 1);
+            localStorage.setItem("platos", JSON.stringify(local));
+            window.location.reload(false);
+        }
+    });
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { guardarDatos } from "../localStorage/localStorage";
 import { obtenerComidaPorId } from "../selectors/obtenerComidaPorId";
