@@ -16,3 +16,7 @@ export const obtenerDatos = () => {
     }
     return JSON.parse(platosStorage);
 };
+
+export const eliminarDatos = (id) => {
+    localStorage.removeItem(id);
+};

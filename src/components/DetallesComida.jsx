@@ -26,6 +26,7 @@ export const DetallesComida = ({ platos }) => {
   const plato = obtenerComidaPorId(id, platos);
   console.log(plato);
   const {
+    id:ide,
     nombrep,
     precio,
     imgprincipal,
@@ -46,6 +47,7 @@ export const DetallesComida = ({ platos }) => {
   };
 
   const objeto = {
+    ide,
     nombrep,
     imgprincipal,
     precio,

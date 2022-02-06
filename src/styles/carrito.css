@@ -13,3 +13,28 @@
   cursor: pointer;
   padding: 30px;
 }
+
+.contenedorCardCarrito {
+  border: 1px solid black;
+  margin: 20px auto;
+  padding: 10px;
+  width: 50rem;
+  border-radius: 30px;
+  display: flex;
+  background: white;
+  position: relative;
+}
+
+.btnEliminar {
+  border: none;
+  background-color: rgba(196, 15, 15, 0.747);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  left: 40rem;
+  bottom: 20rem;
+}
